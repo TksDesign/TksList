@@ -1,0 +1,53 @@
+.element {
+  margin-bottom: 30px;
+  animation: filterAnimation 4s ease-in-out infinite alternate;
+  animation-fill-mode: forwards;
+  transition: filter 2s ease-in-out;
+}
+.element:hover {
+  filter: drop-shadow(0 0 1em rgba(59, 81, 246, 0.25));
+}
+.element:active {
+  filter: drop-shadow(0 0 1em rgba(59, 81, 246, 0.35));
+}
+.element:focus-within {
+  filter: drop-shadow(0 0 1em rgba(59, 121, 246, 0.55));
+}
+@keyframes filterAnimation {
+  from {
+    filter: drop-shadow(0 0 1em rgba(59, 81, 246, 0.198));
+  }
+  to {
+    filter: drop-shadow(0 0 1em rgba(134, 59, 246, 0.198));
+  }
+    
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px ;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.input {
+  background-color: #171717;
+  border: 1px solid #272727;
+  border-radius: 8px;
+  font-size: 16px;
+  height: 40px;
+  width: 100%;
+  padding: 0 20px;
+  color: gray;
+}
+
+.input:focus {
+  outline: none;
+  color: white;
+  border-color: rgba(59, 121, 246, 0.55);
+}
