@@ -3,21 +3,25 @@ import styles from './TaskList.module.css'
 
 const TaskList = ({
   tasksList,
+  incompleteTasks,
   editTask,
   deleteTask,
-  incompleteTasks,
 }) => {
+  // Afficher les de taches 
+  const TasksList=tasksList.map((task)=>(
+    <Taskitem key={task.id}/>
+  ));
   return (
     <div className='box'>
       <h2 className={styles.title}>
         Il te reste {incompleteTasks} tache a accomplir !
       </h2>
+       {tasksList && tasksList.length > 0 &&(
       <ul className={styles.container}>
-        composant task item...
-        <Taskitem />
-        <Taskitem />
-
+        {TasksList}
       </ul>
+       )}
+
     </div>
   )
 }
