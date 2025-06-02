@@ -3,7 +3,7 @@ import styles from './TaskItem.module.css';
 const Taskitem = () => {
     return (
         <li className={`${styles.container} ${styles.default}`}>
-            <div clasName={styles.item}>
+            <div className={styles.item}>
                 <div className={`${styles.id} ${styles.idDefault}`}>
                     (id)
                 </div>

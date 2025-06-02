@@ -45,6 +45,13 @@
   padding: 0 20px;
   color: gray;
 }
+.placeholderDefault::placeholder{
+  color: gray;
+}
+.placeholderWanring::placeholder{
+  color: red;
+  opacity: 0.6;
+}
 
 .input:focus {
   outline: none;
