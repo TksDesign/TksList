@@ -21,8 +21,10 @@ const TaskInput = ({ addTask }) => {
       addTask(taskTitle);
       setTaskTitle("");
       setPlaceholder(true);
-    }
+    }else{
       setPlaceholder(false);
+
+    }
   }
 
   return (
