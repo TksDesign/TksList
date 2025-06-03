@@ -21,9 +21,9 @@ const TaskContainer = () => {
     }
     // fonnction pour editer et supprimer les taches
     const editTask = (id, completedValue) => {
-        setTaskTitle(tasksList.map((task) => {
-            task.id === id ? { ...task, completed: completedValue } : task; // si l'id de la tache correspond a l'id de la tache a editer, on met a jour la tache avec le nouveau statut completed
-        }))
+        setTaskTitle(tasksList.map((task) => 
+            task.id === id ? { ...task, completed: completedValue } : task // si l'id de la tache correspond a l'id de la tache a editer, on met a jour la tache avec le nouveau statut completed
+        ));
     };
     const deleteTask = (id) => {
         setTaskTitle(tasksList.filter((task) => task.id !== id)) //affiche tous les taches sauf celle qui a l'id correspondant
