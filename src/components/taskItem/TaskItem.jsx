@@ -12,7 +12,11 @@ const TaskItem = ({task,editTask,deleteTask}) => {
                     {task.title}
                 </div>
             </div>
-            <button className="button-primary">
+            <button className="button-primary" 
+            onClick={(e) => {
+                e.stopPropagation();
+                deleteTask(task.id)
+                }}>
                 x
             </button>
         </li>

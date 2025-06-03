@@ -12,7 +12,7 @@ const TaskContainer = () => {
     const addTask = (title) => {
 
         const newTask = {
-            id: tasksList.length + 1,
+            id: tasksList.length ? tasksList[tasksList.length -1].id +1 :1, // si la liste des taches n'est pas vide, on prend l'id de la derniere tache et on ajoute 1, sinon on commence a 1
             title: title,
             completed: false
         };
@@ -49,7 +49,7 @@ const TaskContainer = () => {
                 deleteTask={deleteTask}
                 incompleteTasks={incompleteTasks}
             />
-            <Footer />
+            <Footer completedTasks={completedTasks} />
         </main>
     )
 }

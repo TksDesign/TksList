@@ -20,7 +20,7 @@ const TaskList = ({
     <div className='box'>
        {incompleteTasks > 0 &&(
    <h2 className={styles.title}>
-        Il te reste {incompleteTasks} tache a accomplir !
+        Il te reste <span className="important">{incompleteTasks}</span> tache a accomplir !
       </h2>
       )}
        {incompleteTasks === 0 && (
