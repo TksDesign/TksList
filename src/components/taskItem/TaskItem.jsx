@@ -12,12 +12,12 @@ const TaskItem = ({task,editTask,deleteTask}) => {
                     {task.title}
                 </div>
             </div>
-            <button className="button-primary" 
+            <button className="button-primary" style={{fontSize:'12px'}} 
             onClick={(e) => {
                 e.stopPropagation();
                 deleteTask(task.id)
                 }}>
-                x
+                🗑️
             </button>
         </li>
     )

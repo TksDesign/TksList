@@ -5,7 +5,7 @@ const Footer = ({ completedTasks }) => {
         return (
             <footer>
                 <code className={styles.footer}></code>
-                Avec taskList tu as elemine {completedTasks} tache{completedTasks >1 ? 's':''}
+                Avec TksList tu as eleminé {completedTasks} tache{completedTasks >1 ? 's':''}
             </footer>
         )
     }
