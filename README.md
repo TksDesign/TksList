@@ -10,3 +10,18 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+
+## pour deployer run le dist en local
+ -npx serve dist
+ ou 
+ -npm install -g serve 
+   serve dist
+-installation de gh-pages
+  npm install gh-pages --save-dev
+-ajout de la ligne suivannte direct dans package json apres la ligne private:true
+  "homepage": "https://TksDesign.github.io/TksList",
+-ajout de ces deux instructions dans le le scipts depuis package json
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
